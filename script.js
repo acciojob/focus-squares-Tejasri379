@@ -5,9 +5,11 @@ boxes.forEach((square)=>{
 		console.log(e.target.id)
 		changeColor(e.target.id)
 	})
-	// box.addEventListener("mouseout",(e)=>{
-	// 	square.style.background=`#E6E6FA`
-	// })
+	box.addEventListener("mouseout",(e)=>{
+		boxes.forEach((box)=>{
+			box.style.background=`#E6E6FA`
+		})
+	})
 })
 
 function changeColor(hoveredBoxId){
